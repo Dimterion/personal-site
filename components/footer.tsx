@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
             <a
-              href="https://github.com/Dimterion"
+              href="https://github.com/Dimterion/personal-site"
               target="_blank"
               rel="noopener noreferrer"
               className="text-center text-xs leading-5 text-muted-foreground transition-colors hover:text-foreground"
