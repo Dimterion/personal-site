@@ -18,19 +18,19 @@ export default function Intro() {
             href="https://www.dimterion.com/documents/Resume_Dmitrii_Popov_public.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 underline underline-offset-4 transition-colors hover:text-foreground"
+            className="inline-flex items-center gap-1 text-sm underline underline-offset-4 transition-colors hover:text-foreground sm:text-base"
           >
             Resume
             <ExternalLinkIcon />
           </a>
           |
           <a
-            href="https://dimterion.bio.link/"
+            href="https://linktr.ee/dimterion"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 underline underline-offset-4 transition-colors hover:text-foreground"
+            className="inline-flex items-center gap-1 text-sm underline underline-offset-4 transition-colors hover:text-foreground sm:text-base"
           >
-            Bio Link <ExternalLinkIcon />
+            Profile links <ExternalLinkIcon />
           </a>
         </div>
       </div>
