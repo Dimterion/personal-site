@@ -24,7 +24,7 @@ function ScrollBtn() {
 
   return (
     <button
-      className={`fixed bottom-3 right-3 z-10 flex size-6 items-center justify-center rounded-lg bg-muted font-bold text-foreground opacity-50 shadow-lg hover:opacity-100 ${
+      className={`fixed bottom-3 right-3 z-10 flex size-6 items-center justify-center rounded-lg bg-muted-foreground font-bold opacity-70 shadow-lg hover:opacity-100 ${
         showScrollBtn ? "block" : "hidden"
       }`}
       aria-label="Scroll to top"
