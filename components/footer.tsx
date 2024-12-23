@@ -46,7 +46,7 @@ export default function Footer() {
               </a>
             ))}
           </div>
-          <div className="mt-8 md:order-1 md:mt-0">
+          <div className="mt-8 text-center md:order-1 md:mt-0">
             <a
               href="https://github.com/Dimterion/personal-site"
               target="_blank"

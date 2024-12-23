@@ -20,6 +20,7 @@ export default function ThemeToggle() {
   return (
     <Button
       aria-label="Toggle color theme"
+      className="px-0 hover:bg-transparent hover:text-muted-foreground sm:px-3"
       type="button"
       size="sm"
       variant="ghost"

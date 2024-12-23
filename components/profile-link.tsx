@@ -15,9 +15,9 @@ export default function ProfileLink({
   return (
     <section>
       <Card className="rounded-lg border-0 dark:border">
-        <CardContent className="flex flex-col gap-8 pt-6 md:flex-row md:items-center md:justify-between">
+        <CardContent className="flex flex-col gap-8 pt-6 text-sm sm:flex-row sm:items-center sm:justify-between md:text-base">
           <div>
-            <h2 className="text-2xl font-bold">{heading}</h2>
+            <h2 className="text-xl font-bold md:text-2xl">{heading}</h2>
             <p className="text-muted-foreground">{text}</p>
           </div>
           <div>
