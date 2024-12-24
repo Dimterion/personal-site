@@ -1,4 +1,5 @@
 import MDXContent from "@/components/mdx-content";
+import ProfileLink from "@/components/profile-link";
 import { getPostBySlug, getPosts } from "@/lib/posts";
 import { formatDate } from "@/lib/utils";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
@@ -57,6 +58,13 @@ export default async function Post({ params }: { params: { slug: string } }) {
         <main className="prose mt-16 dark:prose-invert">
           <MDXContent source={content} />
         </main>
+        <hr className="my-10"></hr>
+        <ProfileLink
+          heading="Read my stories on Medium"
+          text="I write every Friday and share what I work on and learn."
+          link="https://medium.com/@dimterion"
+          linkText="Visit my blog"
+        />
       </div>
     </section>
   );

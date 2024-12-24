@@ -1,4 +1,5 @@
 import MDXContent from "@/components/mdx-content";
+import ProfileLink from "@/components/profile-link";
 import { getProjectBySlug, getProjects } from "@/lib/projects";
 import { formatDate } from "@/lib/utils";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
@@ -61,6 +62,13 @@ export default async function Project({
         <main className="prose mt-16 dark:prose-invert">
           <MDXContent source={content} />
         </main>
+        <hr className="my-10"></hr>
+        <ProfileLink
+          heading="View my GitHub profile"
+          text="I code every day and keep most of my repos open."
+          link="https://github.com/Dimterion"
+          linkText="Visit my GitHub"
+        />
       </div>
     </section>
   );
