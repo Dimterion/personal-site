@@ -1,7 +1,7 @@
 import Intro from "@/components/intro";
-import NewsletterForm from "@/components/newsletter-form";
-import RecentPosts from "@/components/recent-posts";
 import RecentProjects from "@/components/recent-projects";
+import RecentPosts from "@/components/recent-posts";
+import ProfileLink from "@/components/profile-link";
 
 export default function Home() {
   return (
@@ -10,7 +10,12 @@ export default function Home() {
         <Intro />
         <RecentProjects />
         <RecentPosts />
-        <NewsletterForm />
+        <ProfileLink
+          heading="Read my stories on Medium"
+          text="I write every Friday and share what I work on and learn."
+          link="https://medium.com/@dimterion"
+          linkText="Visit my blog"
+        />
       </div>
     </section>
   );
