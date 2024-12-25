@@ -19,9 +19,10 @@ export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
   }
 
   return (
-    <div>
+    <section>
       <div className="mb-12 flex items-center gap-3">
         <Input
+          id="Posts_Search"
           type="text"
           placeholder="Search posts..."
           className="h-9 w-full sm:w-1/2"
@@ -40,6 +41,6 @@ export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
         )}
       </div>
       <Posts posts={filtered} />
-    </div>
+    </section>
   );
 }
