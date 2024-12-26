@@ -5,7 +5,7 @@ import profileImg from "../public/images/authors/profile_img.jpg";
 export default function Intro() {
   return (
     <section className="mb-24 flex flex-col-reverse items-start gap-x-10 gap-y-4 pb-4 md:flex-row md:items-center">
-      <div className="mt-2 flex-1 md:mt-0">
+      <article className="mt-2 flex-1 md:mt-0">
         <h1 className="title no-underline">Hi, I&#39;m Dmitrii</h1>
         <p className="mt-3 font-light text-muted-foreground">
           I&#39;m a developer and technical consultant, coding daily and writing
@@ -13,7 +13,7 @@ export default function Intro() {
           sections.
         </p>
         <hr className="mt-3"></hr>
-        <div className="mt-3 flex items-center gap-4 text-muted-foreground">
+        <section className="mt-3 flex items-center gap-4 text-muted-foreground">
           <a
             href="https://www.dimterion.com/documents/Resume_Dmitrii_Popov_public.pdf"
             target="_blank"
@@ -32,8 +32,8 @@ export default function Intro() {
           >
             Profile links <ExternalLinkIcon />
           </a>
-        </div>
-      </div>
+        </section>
+      </article>
       <div className="relative">
         <Image
           className="flex-1 rounded-lg grayscale sm:size-48"

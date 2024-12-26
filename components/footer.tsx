@@ -29,35 +29,31 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="py-8">
-      <div className="container max-w-3xl">
-        <div className="md:flex md:items-center md:justify-between">
-          <div className="flex justify-center space-x-6 md:order-2">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="h-5 w-5" />
-              </a>
-            ))}
-          </div>
-          <div className="mt-8 text-center md:order-1 md:mt-0">
-            <a
-              href="https://github.com/Dimterion/personal-site"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-center text-xs leading-5 text-muted-foreground transition-colors hover:text-foreground"
-            >
-              &copy; {new Date().getFullYear()} Dimterion
-            </a>
-          </div>
-        </div>
-      </div>
+    <footer className="container max-w-3xl py-8 md:flex md:items-center md:justify-between">
+      <section className="flex justify-center space-x-6 md:order-2">
+        {navigation.map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <span className="sr-only">{item.name}</span>
+            <item.icon aria-hidden="true" className="h-5 w-5" />
+          </a>
+        ))}
+      </section>
+      <section className="mt-8 text-center md:order-1 md:mt-0">
+        <a
+          href="https://github.com/Dimterion/personal-site"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-center text-xs leading-5 text-muted-foreground transition-colors hover:text-foreground"
+        >
+          &copy; {new Date().getFullYear()} Dimterion
+        </a>
+      </section>
     </footer>
   );
 }
