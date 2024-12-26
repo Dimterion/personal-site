@@ -71,7 +71,7 @@ export default function ContactForm() {
         style={{ display: "none" }}
         {...register("botcheck")}
       ></Input>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <section className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div>
           <Input
             id="name"
@@ -108,8 +108,8 @@ export default function ContactForm() {
             </p>
           )}
         </div>
-      </div>
-      <div className="mt-6">
+      </section>
+      <section className="mt-6">
         <Button
           type="submit"
           disabled={isSubmitting}
@@ -117,7 +117,7 @@ export default function ContactForm() {
         >
           {isSubmitting ? "Submitting..." : "Contact"}
         </Button>
-      </div>
+      </section>
     </form>
   );
 }
