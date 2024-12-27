@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 import Providers from "@/components/providers";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ScrollBtn from "@/components/scroll-btn";
-import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const playfair = Playfair_Display({
@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Dimterion's personal site",
   description:
-    "A personal site of Dimterion, technical consultant and developer.",
+    "Personal site of Dimterion, technical consultant and developer.",
 };
 
 export default function RootLayout({
