@@ -78,6 +78,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -103,21 +104,21 @@
   }
 }
 
-/* Posts components custom styles */
+/* Components custom styles */
 .tooltip-li::after {
   --tooltipScale: 0;
 
-  content: attr(data-info);
-  position: absolute;
-  top: -1.75rem;
-  left: 0;
-  transform: scale(var(--tooltipScale));
-  transform-origin: bottom left;
-  padding: 2px 5px;
+  background: #e1daea;
   border: 2px solid #302a38;
   border-radius: 5px;
-  background: #e1daea;
   color: #302a38;
+  content: attr(data-info);
+  left: 0;
+  padding: 2px 5px;
+  position: absolute;
+  top: -1.75rem;
+  transform: scale(var(--tooltipScale));
+  transform-origin: bottom left;
   transition: 0.5s transform;
 }
 
