@@ -58,7 +58,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(processForm)}
-      className="mt-6 lg:flex-auto"
+      className="mt-8 lg:flex-auto"
       noValidate
     >
       <Input type="hidden" value="" {...register("access_key")} />
@@ -71,7 +71,7 @@ export default function ContactForm() {
         style={{ display: "none" }}
         {...register("botcheck")}
       ></Input>
-      <section className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <section className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <div>
           <Input
             id="name"
@@ -101,7 +101,7 @@ export default function ContactForm() {
           )}
         </div>
         <div className="sm:col-span-2">
-          <Textarea rows={4} placeholder="Message" {...register("message")} />
+          <Textarea rows={8} placeholder="Message" {...register("message")} />
           {errors.message?.message && (
             <p className="ml-1 mt-2 text-sm text-rose-400">
               {errors.message.message}
@@ -109,7 +109,7 @@ export default function ContactForm() {
           )}
         </div>
       </section>
-      <section className="mt-6">
+      <section className="mt-8">
         <Button
           type="submit"
           disabled={isSubmitting}
