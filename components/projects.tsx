@@ -26,7 +26,7 @@ export default function Projects({
               </div>
             )}
             <div className="absolute inset-[0px] rounded-lg bg-background/70 p-4 opacity-0 transition-opacity group-hover:opacity-100"></div>
-            <div className="absolute inset-x-0 bottom-0 translate-y-2 p-6 opacity-0 group-hover:opacity-100">
+            <article className="absolute inset-x-0 bottom-0 translate-y-2 pb-6 pl-4 opacity-0 group-hover:opacity-100">
               <h2 className="title line-clamp-1 text-xl no-underline">
                 {project.title}
               </h2>
@@ -34,7 +34,7 @@ export default function Projects({
               <p className="text-xs font-light">
                 {formatDate(project.publishedAt ?? "")}
               </p>
-            </div>
+            </article>
           </Link>
         </li>
       ))}
