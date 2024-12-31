@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import ExternalLink from "./external-link";
 import profileImg from "../public/images/authors/profile_img.jpg";
 
 export default function Intro() {
@@ -14,24 +14,15 @@ export default function Intro() {
         </p>
         <hr className="mt-3"></hr>
         <section className="mt-3 flex items-center gap-4 text-muted-foreground">
-          <a
-            href="https://www.dimterion.com/documents/Resume_Dmitrii_Popov_public.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-sm underline underline-offset-4 transition-colors hover:text-foreground sm:text-base"
-          >
-            Resume
-            <ExternalLinkIcon />
-          </a>
+          <ExternalLink
+            link="/documents/Resume_Dmitrii_Popov_public.pdf"
+            name="Resume"
+          />
           |
-          <a
-            href="https://linktr.ee/dimterion"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-sm underline underline-offset-4 transition-colors hover:text-foreground sm:text-base"
-          >
-            Profile links <ExternalLinkIcon />
-          </a>
+          <ExternalLink
+            link="https://linktr.ee/dimterion"
+            name="Profile links"
+          />
         </section>
       </article>
       <div className="relative">
