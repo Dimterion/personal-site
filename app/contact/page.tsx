@@ -1,6 +1,6 @@
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import ContactForm from "@/components/contact-form";
 import EmailLink from "@/components/email-link";
+import ExternalLink from "@/components/external-link";
 
 export default function Contact() {
   return (
@@ -12,14 +12,10 @@ export default function Contact() {
         <EmailLink />
         <section className="mt-8">
           View my{" "}
-          <a
-            href="https://linktr.ee/dimterion"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
-          >
-            other profiles <ExternalLinkIcon />
-          </a>
+          <ExternalLink
+            link="https://linktr.ee/dimterion"
+            name="other profiles"
+          />
         </section>
       </article>
     </section>

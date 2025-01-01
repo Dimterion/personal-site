@@ -12,7 +12,7 @@ export default function ExternalLink({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 text-sm underline underline-offset-4 transition-colors hover:text-foreground sm:text-base"
+      className="inline-flex items-center gap-1 text-sm text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground sm:text-base"
     >
       {name} <ExternalLinkIcon />
     </a>

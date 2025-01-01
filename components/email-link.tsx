@@ -8,7 +8,7 @@ export default function EmailLink() {
       Contact me by{" "}
       <a
         href={`mailto:${email}`}
-        className="inline-flex items-center gap-1 text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
+        className="inline-flex items-center gap-1 text-sm text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground sm:text-base"
       >
         email
         <ExternalLinkIcon />
