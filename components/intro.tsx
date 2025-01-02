@@ -15,7 +15,7 @@ export default function Intro() {
         <hr className="mt-3"></hr>
         <section className="mt-3 flex items-center gap-4 text-muted-foreground">
           <ExternalLink
-            link="/documents/Resume_Dmitrii_Popov_public.pdf"
+            link="https://www.dimterion.com/documents/Resume_Dmitrii_Popov_public.pdf"
             name="Resume"
           />
           |
