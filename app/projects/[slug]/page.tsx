@@ -41,7 +41,7 @@ export default async function Project({
         <span>View all projects</span>
       </Link>
       {image && (
-        <div className="relative mb-6 h-52 w-full overflow-hidden rounded-lg sm:h-96">
+        <div className="relative mb-8 h-52 w-full overflow-hidden rounded-lg sm:h-96">
           <Image
             src={image}
             alt={title || ""}
