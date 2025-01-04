@@ -42,8 +42,11 @@ export default function Projects({
     </ul>
   ) : (
     <p>
-      View projects at my{" "}
-      <ExternalLink link="https://github.com/Dimterion" name="GitHub profile" />
+      View projects at{" "}
+      <ExternalLink
+        link="https://github.com/Dimterion"
+        name="my GitHub profile"
+      />
       .
     </p>
   );

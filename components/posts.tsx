@@ -29,11 +29,12 @@ export default function Posts({ posts }: { posts: PostMetadata[] }) {
     </ul>
   ) : (
     <p>
-      No posts found at the moment.{" "}
+      No posts found at the moment. Visit{" "}
       <ExternalLink
         link="https://medium.com/@dimterion"
-        name="Visit my Medium blog."
+        name="my Medium blog"
       />
+      .
     </p>
   );
 }
