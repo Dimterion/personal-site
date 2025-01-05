@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import ExternalLink from "./external-link";
+import ExternalLink from "@/components/external-link";
 import { ProjectMetadata } from "@/lib/projects";
 import { formatDate } from "@/lib/utils";
 

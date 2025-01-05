@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ExternalLink from "./external-link";
+import ExternalLink from "@/components/external-link";
 import { PostMetadata } from "@/lib/posts";
 import { formatDate } from "@/lib/utils";
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import ExternalLink from "./external-link";
-import profileImg from "../public/images/authors/profile_img.jpg";
+import ExternalLink from "@/components/external-link";
+import profileImg from "@/public/images/authors/profile_img.jpg";
 
 export default function Intro() {
   return (

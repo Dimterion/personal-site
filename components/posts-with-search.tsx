@@ -20,7 +20,7 @@ export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
 
   return (
     <section>
-      <div className="mb-12 flex items-center gap-3">
+      <section className="mb-12 flex items-center gap-3">
         <Input
           id="Posts_Search"
           type="text"
@@ -39,7 +39,7 @@ export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
             Reset <Cross2Icon className="ml-2 h-4 w-4" />
           </Button>
         )}
-      </div>
+      </section>
       <Posts posts={filtered} />
     </section>
   );
