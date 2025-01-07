@@ -41,7 +41,7 @@ export default function Projects({
       ))}
     </ul>
   ) : (
-    <p>
+    <p className="text-sm sm:text-base">
       View projects at{" "}
       <ExternalLink
         link="https://github.com/Dimterion"

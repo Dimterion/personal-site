@@ -28,7 +28,7 @@ export default function Posts({ posts }: { posts: PostMetadata[] }) {
       ))}
     </ul>
   ) : (
-    <p>
+    <p className="text-sm sm:text-base">
       No posts found at the moment. Visit{" "}
       <ExternalLink
         link="https://medium.com/@dimterion"

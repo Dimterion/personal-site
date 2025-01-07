@@ -9,7 +9,7 @@ export default function Contact() {
       <h2 className="title">Contact form</h2>
       <ContactForm />
       <hr className="mt-8"></hr>
-      <article className="flex flex-row flex-wrap items-baseline justify-between">
+      <article className="flex flex-row flex-wrap items-baseline justify-between text-sm sm:text-base">
         <section className="mt-8">
           Contact me by <ExternalLink link={`mailto:${email}`} name="email" />
         </section>

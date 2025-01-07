@@ -115,7 +115,7 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className="w-full disabled:opacity-50"
         >
-          {isSubmitting ? "Submitting..." : "Contact"}
+          {isSubmitting ? "Sending..." : "Send message"}
         </Button>
       </section>
     </form>
