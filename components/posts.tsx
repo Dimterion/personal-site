@@ -33,6 +33,7 @@ export default function Posts({ posts }: { posts: PostMetadata[] }) {
       <ExternalLink
         link="https://medium.com/@dimterion"
         name="my Medium blog"
+        copy={false}
       />
       .
     </p>

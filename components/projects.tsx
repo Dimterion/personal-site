@@ -46,6 +46,7 @@ export default function Projects({
       <ExternalLink
         link="https://github.com/Dimterion"
         name="my GitHub profile"
+        copy={false}
       />
       .
     </p>

@@ -17,11 +17,13 @@ export default function Intro() {
           <ExternalLink
             link="https://www.dimterion.com/documents/Resume_Dmitrii_Popov_public.pdf"
             name="Resume"
+            copy={false}
           />
           |
           <ExternalLink
             link="https://linktr.ee/dimterion"
             name="Profile links"
+            copy={false}
           />
         </section>
       </article>

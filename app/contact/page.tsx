@@ -11,13 +11,15 @@ export default function Contact() {
       <hr className="mt-8"></hr>
       <article className="flex flex-row flex-wrap items-baseline justify-between text-sm sm:text-base">
         <section className="mt-8">
-          Contact me by <ExternalLink link={`mailto:${email}`} name="email" />
+          Contact me by{" "}
+          <ExternalLink link={`mailto:${email}`} name="email" copy={false} />
         </section>
         <section className="mt-8">
           View my{" "}
           <ExternalLink
             link="https://linktr.ee/dimterion"
             name="other profiles"
+            copy={false}
           />
         </section>
       </article>
