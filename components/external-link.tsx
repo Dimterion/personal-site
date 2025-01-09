@@ -17,8 +17,9 @@ export default function ExternalLink({
 
     try {
       await navigator.clipboard.writeText(linkToCopy);
-      toast.success("Copied!");
+      toast.success("Copied to clipboard.");
     } catch (err) {
+      toast.error("An error occurred. Please try again.");
       console.error("An error occurred.", err);
     }
   };
@@ -34,8 +35,11 @@ export default function ExternalLink({
         {name} {!copy && <ExternalLinkIcon />}
       </a>
       {copy && (
-        <button className="ml-1 inline-flex items-center" onClick={copyLink}>
-          (<CopyIcon />)
+        <button
+          className="ml-1 inline-flex items-center text-muted-foreground transition-colors hover:text-foreground"
+          onClick={copyLink}
+        >
+          <CopyIcon />
         </button>
       )}
     </>
