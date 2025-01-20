@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import ContactForm from "@/components/contact-form";
 import ExternalLink from "@/components/external-link";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 export default function Contact() {
   const email = atob(process.env.NEXT_PUBLIC_EMAIL_KEY as string);

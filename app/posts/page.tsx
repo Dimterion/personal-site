@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import PostsWithSearch from "@/components/posts-with-search";
 import ProfileLink from "@/components/profile-link";
 import { getPosts } from "@/lib/posts";
+
+export const metadata: Metadata = {
+  title: "Posts",
+};
 
 export default async function PostPage() {
   const posts = await getPosts();

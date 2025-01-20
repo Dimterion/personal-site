@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import Projects from "@/components/projects";
 import ProfileLink from "@/components/profile-link";
 import { getProjects } from "@/lib/projects";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 export default async function ProjectsPage() {
   const projects = await getProjects();

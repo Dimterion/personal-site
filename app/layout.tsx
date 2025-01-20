@@ -14,9 +14,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Dimterion's personal site",
+  title: {
+    template: "%s | Dimterion",
+    default: "Dimterion",
+  },
   description:
     "Personal site of Dimterion, technical consultant and developer.",
+  metadataBase: new URL("https://www.dimterion.com/"),
 };
 
 export default function RootLayout({
