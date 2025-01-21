@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -6,6 +7,10 @@ import MDXContent from "@/components/mdx-content";
 import ProfileLink from "@/components/profile-link";
 import { formatDate } from "@/lib/utils";
 import { getProjectBySlug, getProjects } from "@/lib/projects";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 export async function generateStaticParams() {
   const projects = await getProjects();
