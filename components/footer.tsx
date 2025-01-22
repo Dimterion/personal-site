@@ -29,8 +29,8 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="container max-w-3xl py-8 md:flex md:items-center md:justify-between">
-      <section className="flex justify-center space-x-6 md:order-2">
+    <footer className="container max-w-3xl py-8 md:flex md:flex-row-reverse md:items-center md:justify-between">
+      <section className="flex justify-center space-x-6">
         {navigation.map((item) => (
           <a
             key={item.name}
@@ -44,7 +44,7 @@ export default function Footer() {
           </a>
         ))}
       </section>
-      <section className="mt-8 text-center md:order-1 md:mt-0">
+      <section className="mt-8 text-center md:mt-0">
         <a
           href="https://github.com/Dimterion/personal-site"
           target="_blank"
