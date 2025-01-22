@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaArrowUp } from "react-icons/fa6";
+import { TriangleUpIcon } from "@radix-ui/react-icons";
 
 function ScrollBtn() {
   const [showScrollBtn, setShowScrollBtn] = useState(false);
@@ -30,7 +30,7 @@ function ScrollBtn() {
       aria-label="Scroll to top"
       onClick={() => scrollToTop()}
     >
-      <FaArrowUp />
+      <TriangleUpIcon className="size-6" />
     </button>
   );
 }

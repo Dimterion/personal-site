@@ -20,7 +20,7 @@ export default function ThemeToggle() {
   return (
     <Button
       aria-label="Toggle color theme"
-      className="px-0 hover:bg-transparent hover:text-muted-foreground sm:px-3"
+      className={`px-0 hover:bg-transparent sm:px-3 ${resolvedTheme === "dark" ? "hover:text-orange-400" : "hover:text-sky-800"}`}
       type="button"
       size="sm"
       variant="ghost"
