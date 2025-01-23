@@ -24,21 +24,6 @@
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
     --radius: 0.5rem;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-
-    --sh-class: #8d85ff;
-    --sh-identifier: #354150;
-    --sh-keyword: #f47067;
-    --sh-string: #00a99a;
-    --sh-property: #4e8fdf;
-    --sh-entity: #6eafad;
-    --sh-jsxliterals: #bf7db6;
-    --sh-sign: #8996a3;
-    --sh-comment: #a19595;
   }
 
   .dark {
@@ -61,16 +46,6 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
   }
 }
 
@@ -102,26 +77,4 @@
   .prose code span {
     @apply font-medium;
   }
-}
-
-/* Components custom styles */
-.tooltip-li::after {
-  --tooltipScale: 0;
-
-  background: #e1daea;
-  border: 2px solid #302a38;
-  border-radius: 5px;
-  color: #302a38;
-  content: attr(data-info);
-  left: 0;
-  padding: 2px 5px;
-  position: absolute;
-  top: -1.75rem;
-  transform: scale(var(--tooltipScale));
-  transform-origin: bottom left;
-  transition: 0.5s transform;
-}
-
-.tooltip-li:hover::after {
-  --tooltipScale: 1;
 }
