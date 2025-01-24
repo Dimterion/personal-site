@@ -31,7 +31,7 @@ export default function Intro() {
         <Image
           className="flex-1 rounded-lg grayscale sm:size-48"
           src={profileImg}
-          alt="Profile image"
+          alt="Dimterion's profile image"
           priority
         />
       </div>

@@ -8,9 +8,25 @@ import ProfileLink from "@/components/profile-link";
 import { formatDate } from "@/lib/utils";
 import { getPostBySlug, getPosts } from "@/lib/posts";
 
-export const metadata: Metadata = {
-  title: "Posts",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { slug } = params;
+  const post = await getPostBySlug(slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  const { metadata } = post;
+  const { title } = metadata;
+
+  return {
+    title: title || "Posts",
+  };
+}
 
 export async function generateStaticParams() {
   const posts = await getPosts();
