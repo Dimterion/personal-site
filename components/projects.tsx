@@ -14,7 +14,7 @@ export default function Projects({
       {projects.map((project) => (
         <li key={project.slug} className="group relative">
           <Link href={`/projects/${project.slug}`}>
-            {project.image && (
+            {project.image ? (
               <div className="relative m-auto h-52 w-full max-w-[512px] overflow-hidden rounded-lg bg-muted">
                 <Image
                   src={project.image}
@@ -24,6 +24,10 @@ export default function Projects({
                   className="rounded-lg object-cover object-center transition-colors"
                   priority={true}
                 />
+              </div>
+            ) : (
+              <div className="relative m-auto flex h-52 w-full max-w-[512px] flex-col items-center justify-center overflow-hidden rounded-lg bg-muted-foreground text-muted">
+                <h2 className="m-8 text-center text-4xl">{project.title}</h2>
               </div>
             )}
             <div className="absolute inset-[0px] rounded-lg bg-background/70 p-4 opacity-0 transition-opacity group-hover:opacity-100"></div>

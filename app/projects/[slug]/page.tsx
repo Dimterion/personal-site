@@ -61,7 +61,7 @@ export default async function Project({
         <ArrowLeftIcon className="h-5 w-5" />
         <span>View all projects</span>
       </Link>
-      {image && (
+      {image ? (
         <div className="relative mb-8 h-52 w-full overflow-hidden rounded-lg sm:h-96">
           <Image
             src={image}
@@ -71,6 +71,10 @@ export default async function Project({
             sizes="96"
             priority
           />
+        </div>
+      ) : (
+        <div className="relative mx-auto mb-8 flex h-52 w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-muted-foreground text-muted sm:h-96">
+          <h2 className="m-32 text-center text-6xl">{title}</h2>
         </div>
       )}
       <aside>
