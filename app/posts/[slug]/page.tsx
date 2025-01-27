@@ -21,10 +21,14 @@ export async function generateMetadata({
   }
 
   const { metadata } = post;
-  const { title } = metadata;
+  const { title, summary, image } = metadata;
 
   return {
     title: title || "Posts",
+    description: summary,
+    openGraph: {
+      images: image || "../../opengraph-image.jpg",
+    },
   };
 }
 
