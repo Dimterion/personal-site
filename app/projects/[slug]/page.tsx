@@ -77,8 +77,8 @@ export default async function Project({
           />
         </div>
       ) : (
-        <div className="relative mx-auto mb-8 flex h-52 w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-muted-foreground text-muted sm:h-96">
-          <h2 className="m-32 text-center text-6xl">{title}</h2>
+        <div className="relative mb-8 flex h-52 w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-muted-foreground text-muted sm:h-96">
+          <h2 className="m-32 text-center text-4xl sm:text-6xl">{title}</h2>
         </div>
       )}
       <aside>
