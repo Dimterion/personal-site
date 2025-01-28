@@ -50,7 +50,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   }
 
   const { metadata, content } = post;
-  const { title, image, author, publishedAt } = metadata;
+  const { title, image, author, publishedAt, tag } = metadata;
 
   return (
     <section className="container max-w-3xl pb-24 pt-32">
@@ -74,7 +74,9 @@ export default async function Post({ params }: { params: { slug: string } }) {
         </div>
       ) : (
         <div className="relative mb-8 flex h-52 w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-muted-foreground text-muted sm:h-96">
-          <h2 className="m-32 text-center text-4xl sm:text-6xl">{title}</h2>
+          <h2 className="m-32 text-center text-3xl font-semibold sm:text-6xl">
+            {title}
+          </h2>
         </div>
       )}
       <aside>
@@ -82,6 +84,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
         <p className="mt-3 text-xs text-muted-foreground">
           {author} / {formatDate(publishedAt ?? "")}
         </p>
+        {tag && <pre className="mt-2">{tag}</pre>}
       </aside>
       <main className="prose mt-16 dark:prose-invert">
         <MDXContent source={content} />

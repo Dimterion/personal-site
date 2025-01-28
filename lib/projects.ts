@@ -15,6 +15,7 @@ export type ProjectMetadata = {
   image?: string;
   author?: string;
   publishedAt?: string;
+  tag?: string;
   slug: string;
 };
 
