@@ -84,7 +84,11 @@ export default async function Post({ params }: { params: { slug: string } }) {
         <p className="mt-3 text-xs text-muted-foreground">
           {author} / {formatDate(publishedAt ?? "")}
         </p>
-        {tag && <pre className="mt-2">{tag}</pre>}
+        {tag && (
+          <pre className="mt-4 w-fit rounded-lg border bg-muted-foreground px-4 py-1 font-semibold text-muted">
+            {tag}
+          </pre>
+        )}
       </aside>
       <main className="prose mt-16 dark:prose-invert">
         <MDXContent source={content} />
