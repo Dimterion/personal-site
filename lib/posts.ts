@@ -15,7 +15,7 @@ export type PostMetadata = {
   image?: string;
   author?: string;
   publishedAt?: string;
-  tag?: Array<string>;
+  tags?: Array<string>;
   slug: string;
 };
 

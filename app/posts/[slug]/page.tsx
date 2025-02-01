@@ -50,7 +50,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   }
 
   const { metadata, content } = post;
-  const { title, image, author, publishedAt, tag } = metadata;
+  const { title, image, author, publishedAt, tags } = metadata;
 
   return (
     <section className="container max-w-3xl pb-24 pt-32">
@@ -84,9 +84,9 @@ export default async function Post({ params }: { params: { slug: string } }) {
         <p className="mt-3 text-xs text-muted-foreground">
           {author} / {formatDate(publishedAt ?? "")}
         </p>
-        {tag && (
+        {tags && (
           <div className="mt-4 flex flex-wrap gap-1">
-            {tag.map((tag) => (
+            {tags.map((tag) => (
               <pre
                 key={tag}
                 className="w-fit rounded-lg border bg-muted px-4 py-1 font-semibold text-foreground"
