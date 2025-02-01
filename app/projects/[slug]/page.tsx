@@ -89,9 +89,16 @@ export default async function Project({
           {author} / {formatDate(publishedAt ?? "")}
         </p>
         {tag && (
-          <pre className="mt-4 w-fit rounded-lg border bg-muted-foreground px-4 py-1 font-semibold text-muted">
-            {tag}
-          </pre>
+          <div className="mt-4 flex flex-wrap gap-1">
+            {tag.map((tag) => (
+              <pre
+                key={tag}
+                className="w-fit rounded-lg border bg-muted px-4 py-1 font-semibold text-foreground"
+              >
+                {tag}
+              </pre>
+            ))}
+          </div>
         )}
       </aside>
       <main className="prose mt-16 dark:prose-invert">
