@@ -4,6 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import MDXContent from "@/components/mdx-content";
+import CopyLink from "@/components/copy-link";
 import ProfileLink from "@/components/profile-link";
 import { formatDate } from "@/lib/utils";
 import { getProjectBySlug, getProjects } from "@/lib/projects";
@@ -58,13 +59,16 @@ export default async function Project({
 
   return (
     <section className="container max-w-3xl pb-24 pt-32">
-      <Link
-        href="/projects"
-        className="mb-8 inline-flex items-center gap-2 text-center text-sm font-light text-zinc-500 transition-colors hover:text-foreground dark:text-zinc-400 dark:hover:text-foreground"
-      >
-        <ArrowLeftIcon className="h-5 w-5" />
-        <span>View all projects</span>
-      </Link>
+      <aside className="mb-8 flex justify-between">
+        <Link
+          href="/projects"
+          className="inline-flex items-center gap-2 text-center text-sm font-light text-zinc-500 transition-colors hover:text-foreground dark:text-zinc-400 dark:hover:text-foreground"
+        >
+          <ArrowLeftIcon className="h-5 w-5" />
+          <span>View all projects</span>
+        </Link>
+        <CopyLink />
+      </aside>
       {image ? (
         <div className="relative mb-8 h-52 w-full overflow-hidden rounded-lg sm:h-96">
           <Image
