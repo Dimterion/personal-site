@@ -4,6 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import MDXContent from "@/components/mdx-content";
+import CopyLink from "@/components/copy-link";
 import ProfileLink from "@/components/profile-link";
 import { formatDate } from "@/lib/utils";
 import { getPostBySlug, getPosts } from "@/lib/posts";
@@ -54,13 +55,16 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
   return (
     <section className="container max-w-3xl pb-24 pt-32">
-      <Link
-        href="/posts"
-        className="mb-8 inline-flex items-center gap-2 text-center text-sm font-light text-zinc-500 transition-colors hover:text-foreground dark:text-zinc-400 dark:hover:text-foreground"
-      >
-        <ArrowLeftIcon className="h-5 w-5" />
-        <span>View all posts</span>
-      </Link>
+      <aside className="mb-8 flex justify-between">
+        <Link
+          href="/posts"
+          className="inline-flex items-center gap-2 text-center text-sm font-light text-zinc-500 transition-colors hover:text-foreground dark:text-zinc-400 dark:hover:text-foreground"
+        >
+          <ArrowLeftIcon className="h-5 w-5" />
+          <span>View all posts</span>
+        </Link>
+        <CopyLink />
+      </aside>
       {image ? (
         <div className="relative mb-8 h-52 w-full overflow-hidden rounded-lg sm:h-96">
           <Image
