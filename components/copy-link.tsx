@@ -30,7 +30,9 @@ export default function CopyLink() {
         <CopyIcon />
       </button>
       {copied && (
-        <span className="absolute right-0 mt-5 min-w-[80px]">Link copied!</span>
+        <span className="absolute right-0 z-10 mt-6 w-44 rounded-lg bg-muted p-1 text-center text-xs text-foreground">
+          Page link copied to clipboard
+        </span>
       )}
     </div>
   );
