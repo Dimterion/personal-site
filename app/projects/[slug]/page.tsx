@@ -67,7 +67,7 @@ export default async function Project({
           <ArrowLeftIcon className="h-5 w-5" />
           <span>View all projects</span>
         </Link>
-        <CopyLink />
+        <CopyLink linkText="Project" />
       </aside>
       {image ? (
         <div className="relative mb-8 h-52 w-full overflow-hidden rounded-lg sm:h-96">

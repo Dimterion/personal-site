@@ -63,7 +63,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
           <ArrowLeftIcon className="h-5 w-5" />
           <span>View all posts</span>
         </Link>
-        <CopyLink />
+        <CopyLink linkText="Post" />
       </aside>
       {image ? (
         <div className="relative mb-8 h-52 w-full overflow-hidden rounded-lg sm:h-96">

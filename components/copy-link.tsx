@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { CopyIcon } from "@radix-ui/react-icons";
 
-export default function CopyLink() {
+export default function CopyLink({ linkText }: { linkText?: string }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -30,8 +30,8 @@ export default function CopyLink() {
         <CopyIcon />
       </button>
       {copied && (
-        <span className="absolute right-0 z-10 mt-6 w-44 rounded-lg bg-muted p-1 text-center text-xs text-foreground">
-          Page link copied to clipboard
+        <span className="absolute right-0 z-10 mt-6 w-48 rounded-lg bg-muted p-1 text-center text-xs text-foreground">
+          {linkText || "Page"} link copied to clipboard.
         </span>
       )}
     </div>
