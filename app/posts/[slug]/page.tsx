@@ -89,7 +89,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
           {author} / {formatDate(publishedAt ?? "")}
         </p>
         {tags && (
-          <div className="mt-4 flex flex-wrap gap-1">
+          <div className="mt-6 flex flex-wrap gap-1">
             {tags.map((tag) => (
               <pre
                 key={tag}

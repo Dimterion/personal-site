@@ -36,9 +36,6 @@ export default function Projects({
                 {project.title}
               </h2>
               <p className="line-clamp-1 text-sm">{project.summary}</p>
-              <p className="text-xs font-light">
-                {formatDate(project.publishedAt ?? "")}
-              </p>
             </article>
           </Link>
         </li>

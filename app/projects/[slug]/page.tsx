@@ -89,11 +89,8 @@ export default async function Project({
       )}
       <aside>
         <h1 className="title">{title}</h1>
-        <p className="mt-3 text-xs text-muted-foreground">
-          {author} / {formatDate(publishedAt ?? "")}
-        </p>
         {tags && (
-          <div className="mt-4 flex flex-wrap gap-1">
+          <div className="mt-6 flex flex-wrap gap-1">
             {tags.map((tag) => (
               <pre
                 key={tag}
