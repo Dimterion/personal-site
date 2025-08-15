@@ -1,7 +1,9 @@
 "use client";
 
-import ProfileLink from "@/components/profile-link";
 import { useEffect, useState } from "react";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import ProfileLink from "@/components/profile-link";
+import Link from "next/link";
 
 type MediumPost = {
   title: string;
@@ -49,20 +51,30 @@ export default function MediumPosts() {
         <p>Loading...</p>
       ) : (
         <ul className="flex flex-col gap-8">
-          {posts.map((post) => (
-            <li key={post.guid}>
-              <a
-                href={post.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col justify-between gap-x-4 gap-y-1 transition-opacity hover:opacity-70 sm:flex-row"
-              >
+          {posts.length === 0 ? (
+            <Link
+              href="/posts"
+              className="inline-flex items-center gap-1 text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
+            >
+              Check my posts here
+            </Link>
+          ) : (
+            posts.map((post) => (
+              <li key={post.guid}>
                 <article className="max-w-lg">
                   <p className="text-lg font-semibold">{post.title}</p>
                 </article>
-              </a>
-            </li>
-          ))}
+                <a
+                  href={post.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 line-clamp-2 inline-flex items-center gap-1 text-sm font-light text-muted-foreground underline hover:text-foreground"
+                >
+                  Read this post on Medium <ExternalLinkIcon />
+                </a>
+              </li>
+            ))
+          )}
         </ul>
       )}
       <hr className="my-12"></hr>
