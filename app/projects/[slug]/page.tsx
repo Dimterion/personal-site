@@ -6,7 +6,6 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import MDXContent from "@/components/mdx-content";
 import CopyLink from "@/components/copy-link";
 import ProfileLink from "@/components/profile-link";
-import { formatDate } from "@/lib/utils";
 import { getProjectBySlug, getProjects } from "@/lib/projects";
 
 export async function generateMetadata({
@@ -42,7 +41,7 @@ export async function generateStaticParams() {
   return slugs;
 }
 
-export default async function Project({
+export default async function ProjectPage({
   params,
 }: {
   params: { slug: string };
@@ -55,7 +54,7 @@ export default async function Project({
   }
 
   const { metadata, content } = project;
-  const { title, image, author, publishedAt, tags } = metadata;
+  const { title, image, tags } = metadata;
 
   return (
     <section className="container max-w-3xl pb-24 pt-32">

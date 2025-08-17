@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Posts",
 };
 
-export default async function PostPage() {
+export default async function PostsPage() {
   const posts = await getPosts();
 
   return (

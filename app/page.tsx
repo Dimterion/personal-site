@@ -3,7 +3,7 @@ import RecentProjects from "@/components/recent-projects";
 import RecentPosts from "@/components/recent-posts";
 import ProfileLink from "@/components/profile-link";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <section className="container max-w-3xl py-24">
       <Intro />

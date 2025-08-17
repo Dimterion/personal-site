@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Page not found",
 };
 
-export default function NotFound() {
+export default function NotFoundPage() {
   return (
     <section className="mx-auto min-h-full max-w-max px-8 pb-24 pt-40 sm:flex sm:items-center">
       <p className="mb-2 text-4xl font-bold tracking-tight text-muted-foreground sm:mb-0 sm:mt-4 sm:text-5xl">

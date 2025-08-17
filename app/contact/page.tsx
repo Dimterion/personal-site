@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Contact",
 };
 
-export default function Contact() {
+export default function ContactPage() {
   const email = atob(process.env.NEXT_PUBLIC_EMAIL_KEY as string);
 
   return (
