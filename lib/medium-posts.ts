@@ -1,7 +1,8 @@
 export type MediumPostMetadata = {
-  title: string;
-  link: string;
   guid: string;
+  link: string;
+  title: string;
+  pubDate: string;
 };
 
 export async function getMediumPosts(): Promise<MediumPostMetadata[]> {
@@ -11,8 +12,9 @@ export async function getMediumPosts(): Promise<MediumPostMetadata[]> {
   const data = await res.json();
 
   return data.items.map((item: MediumPostMetadata) => ({
-    title: item.title,
-    link: item.link,
     guid: item.guid,
+    link: item.link,
+    title: item.title,
+    pubDate: item.pubDate,
   }));
 }

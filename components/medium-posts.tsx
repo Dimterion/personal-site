@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { getMediumPosts } from "@/lib/medium-posts";
+import { formatDate } from "@/lib/utils";
 
 export default async function MediumPosts() {
   let posts = [];
@@ -40,19 +41,27 @@ export default async function MediumPosts() {
         </p>
       ) : (
         posts.map((post) => (
-          <li key={post.guid}>
+          <li
+            key={post.guid}
+            className="flex flex-col justify-between gap-x-4 gap-y-1 sm:flex-row"
+          >
             <article className="max-w-lg">
               <p className="text-lg font-semibold">{post.title}</p>
+              <a
+                href={post.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={post.title}
+                className="mt-1 line-clamp-2 inline-flex items-center gap-1 text-sm font-light text-muted-foreground underline hover:text-foreground"
+              >
+                Read this post on Medium <ExternalLinkIcon />
+              </a>
             </article>
-            <a
-              href={post.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={post.title}
-              className="mt-1 line-clamp-2 inline-flex items-center gap-1 text-sm font-light text-muted-foreground underline hover:text-foreground"
-            >
-              Read this post on Medium <ExternalLinkIcon />
-            </a>
+            {post.pubDate && (
+              <p className="mt-1 text-sm font-light">
+                {formatDate(post.pubDate)}
+              </p>
+            )}
           </li>
         ))
       )}
