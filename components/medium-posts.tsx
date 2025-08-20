@@ -52,10 +52,21 @@ export default async function MediumPosts() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={post.title}
-                className="mt-1 line-clamp-2 inline-flex items-center gap-1 text-sm font-light text-muted-foreground underline hover:text-foreground"
+                className="mt-1 line-clamp-2 inline-flex items-center gap-1 font-light text-muted-foreground underline hover:text-foreground"
               >
                 Read this post on Medium <ExternalLinkIcon />
               </a>
+              <aside className="mt-1 flex flex-wrap">
+                {post.categories &&
+                  post.categories.map((category, index) => (
+                    <pre
+                      key={`${category}-${index}`}
+                      className="mr-2 mt-2 w-fit rounded-lg border bg-muted p-1 text-xs font-semibold text-foreground"
+                    >
+                      {category}
+                    </pre>
+                  ))}
+              </aside>
             </article>
             {post.pubDate && (
               <p className="mt-1 text-sm font-light">

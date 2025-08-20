@@ -3,6 +3,7 @@ export type MediumPostMetadata = {
   link: string;
   title: string;
   pubDate: string;
+  categories?: string[];
 };
 
 export async function getMediumPosts(): Promise<MediumPostMetadata[]> {
@@ -16,5 +17,6 @@ export async function getMediumPosts(): Promise<MediumPostMetadata[]> {
     link: item.link,
     title: item.title,
     pubDate: item.pubDate,
+    categories: item.categories ?? [],
   }));
 }
