@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import Skeleton from "@/components/skeleton";
 import MediumPosts from "@/components/medium-posts";
 import ProfileLink from "@/components/profile-link";
 
@@ -11,7 +12,7 @@ export default function MediumPostsPage() {
   return (
     <section className="container max-w-3xl pb-24 pt-40">
       <h1 className="title mb-12">Latest Medium Posts</h1>
-      <Suspense fallback={<p>Loading posts...</p>}>
+      <Suspense fallback={<Skeleton />}>
         <MediumPosts />
       </Suspense>
       <hr className="my-12"></hr>
