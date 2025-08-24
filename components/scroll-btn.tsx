@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { TriangleUpIcon } from "@radix-ui/react-icons";
 
-function ScrollBtn() {
+export default function ScrollBtn() {
   const [showScrollBtn, setShowScrollBtn] = useState(false);
 
   function scrollToTop() {
@@ -34,5 +34,3 @@ function ScrollBtn() {
     </button>
   );
 }
-
-export default ScrollBtn;
