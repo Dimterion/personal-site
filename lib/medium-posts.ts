@@ -4,6 +4,7 @@ export type MediumPostMetadata = {
   title: string;
   pubDate: string;
   categories?: string[];
+  description?: string;
 };
 
 export async function getMediumPosts(): Promise<MediumPostMetadata[]> {
@@ -21,5 +22,6 @@ export async function getMediumPosts(): Promise<MediumPostMetadata[]> {
     title: item.title,
     pubDate: item.pubDate,
     categories: item.categories ?? [],
+    description: item.description,
   }));
 }

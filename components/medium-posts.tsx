@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { getMediumPosts, MediumPostMetadata } from "@/lib/medium-posts";
-import { formatDate } from "@/lib/utils";
+import { extractFirstSentence, formatDate } from "@/lib/utils";
 
 export default async function MediumPosts() {
   let posts: MediumPostMetadata[] = [];
@@ -35,16 +35,19 @@ export default async function MediumPosts() {
       {posts.map((post) => (
         <li
           key={post.guid}
-          className="flex min-h-44 flex-col justify-between gap-x-4 gap-y-1 rounded-md border p-6 sm:flex-row sm:items-center"
+          className="flex min-h-56 flex-col justify-between gap-x-4 gap-y-1 rounded-md border p-6 sm:flex-row sm:items-center"
         >
           <article className="flex max-w-lg flex-col flex-nowrap gap-1">
             <p className="text-lg font-semibold">{post.title}</p>
+            <p className="mt-1 line-clamp-2 text-sm font-light text-muted-foreground">
+              {extractFirstSentence(post.description)}
+            </p>
             <a
               href={post.link}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={post.title}
-              className="mt-1 line-clamp-2 inline-flex items-center gap-1 text-sm font-light text-muted-foreground underline hover:text-foreground sm:text-base"
+              className="mt-1 line-clamp-2 inline-flex items-center gap-1 text-sm text-muted-foreground underline hover:text-foreground sm:text-base"
             >
               Read this post on Medium <ExternalLinkIcon />
             </a>
