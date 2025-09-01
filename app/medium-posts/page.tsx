@@ -26,7 +26,7 @@ export default function MediumPostsPage() {
       </Link>
       <hr className="my-12"></hr>
       <ProfileLink
-        heading="Read my stories on Medium"
+        heading="Check my 160+ stories on Medium"
         text="I write every Friday and share what I work on and learn."
         link="https://medium.com/@dimterion"
         linkText="Visit my blog"

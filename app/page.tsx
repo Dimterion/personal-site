@@ -10,10 +10,17 @@ export default function HomePage() {
       <RecentProjects />
       <RecentPosts />
       <ProfileLink
-        heading="Read my stories on Medium"
+        heading="Check my 160+ stories on Medium"
         text="I write every Friday and share what I work on and learn."
         link="https://medium.com/@dimterion"
         linkText="Visit my blog"
+      />
+      <br></br>
+      <ProfileLink
+        heading="View my GitHub profile"
+        text="I code every day and keep most of my repos open."
+        link="https://github.com/Dimterion"
+        linkText="Visit my GitHub"
       />
     </section>
   );
