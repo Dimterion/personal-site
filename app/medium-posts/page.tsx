@@ -5,6 +5,7 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Skeleton from "@/components/skeleton";
 import MediumPosts from "@/components/medium-posts";
 import ProfileLink from "@/components/profile-link";
+import { defaultMediumLinkContent } from "@/content/links-content";
 
 export const metadata: Metadata = {
   title: "Medium posts",
@@ -26,10 +27,10 @@ export default function MediumPostsPage() {
       </Link>
       <hr className="my-12"></hr>
       <ProfileLink
-        heading="Check my 160+ stories on Medium"
-        text="I write every Friday and share what I work on and learn."
-        link="https://medium.com/@dimterion"
-        linkText="Visit my blog"
+        heading={defaultMediumLinkContent.heading}
+        text={defaultMediumLinkContent.text}
+        link={defaultMediumLinkContent.link}
+        linkText={defaultMediumLinkContent.linkText}
       />
     </section>
   );

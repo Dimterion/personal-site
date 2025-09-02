@@ -2,6 +2,10 @@ import Intro from "@/components/intro";
 import RecentProjects from "@/components/recent-projects";
 import RecentPosts from "@/components/recent-posts";
 import ProfileLink from "@/components/profile-link";
+import {
+  defaultMediumLinkContent,
+  defaultGitHubLinkContent,
+} from "@/content/links-content";
 
 export default function HomePage() {
   return (
@@ -10,17 +14,17 @@ export default function HomePage() {
       <RecentProjects />
       <RecentPosts />
       <ProfileLink
-        heading="Check my 160+ stories on Medium"
-        text="I write every Friday and share what I work on and learn."
-        link="https://medium.com/@dimterion"
-        linkText="Visit my blog"
+        heading={defaultMediumLinkContent.heading}
+        text={defaultMediumLinkContent.text}
+        link={defaultMediumLinkContent.link}
+        linkText={defaultMediumLinkContent.linkText}
       />
       <br></br>
       <ProfileLink
-        heading="View my GitHub profile"
-        text="I code every day and keep most of my repos open."
-        link="https://github.com/Dimterion"
-        linkText="Visit my GitHub"
+        heading={defaultGitHubLinkContent.heading}
+        text={defaultGitHubLinkContent.text}
+        link={defaultGitHubLinkContent.link}
+        linkText={defaultGitHubLinkContent.linkText}
       />
     </section>
   );
