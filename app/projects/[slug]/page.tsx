@@ -7,6 +7,7 @@ import MDXContent from "@/components/mdx-content";
 import CopyLink from "@/components/copy-link";
 import ProfileLink from "@/components/profile-link";
 import { getProjectBySlug, getProjects } from "@/lib/projects";
+import { defaultGitHubLinkContent } from "@/content/links-content";
 
 export async function generateMetadata({
   params,
@@ -106,10 +107,10 @@ export default async function ProjectPage({
       </main>
       <hr className="my-10"></hr>
       <ProfileLink
-        heading="View my GitHub profile"
-        text="I code every day and keep most of my repos open."
-        link="https://github.com/Dimterion"
-        linkText="Visit my GitHub"
+        heading={defaultGitHubLinkContent.heading}
+        text={defaultGitHubLinkContent.text}
+        link={defaultGitHubLinkContent.link}
+        linkText={defaultGitHubLinkContent.linkText}
       />
     </section>
   );

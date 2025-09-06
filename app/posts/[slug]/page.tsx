@@ -8,6 +8,7 @@ import CopyLink from "@/components/copy-link";
 import ProfileLink from "@/components/profile-link";
 import { formatDate } from "@/lib/utils";
 import { getPostBySlug, getPosts } from "@/lib/posts";
+import { defaultMediumLinkContent } from "@/content/links-content";
 
 export async function generateMetadata({
   params,
@@ -110,10 +111,10 @@ export default async function PostPage({
       </main>
       <hr className="my-10"></hr>
       <ProfileLink
-        heading="Check my 160+ stories on Medium"
-        text="I write every Friday and share what I work on and learn."
-        link="https://medium.com/@dimterion"
-        linkText="Visit my blog"
+        heading={defaultMediumLinkContent.heading}
+        text={defaultMediumLinkContent.text}
+        link={defaultMediumLinkContent.link}
+        linkText={defaultMediumLinkContent.linkText}
       />
     </section>
   );
